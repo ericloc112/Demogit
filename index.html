@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#183a32" />
+  <title>Chinh phục cung đường trên mây | Lên đường</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+    }
+
+    .hero-image {
+      background-image:
+        linear-gradient(90deg, rgba(13, 35, 29, 0.78) 0%, rgba(13, 35, 29, 0.48) 48%, rgba(13, 35, 29, 0.12) 100%),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2200&q=85");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .tour-image {
+      background-image: url("https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=1200&q=85");
+      background-position: center;
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body class="bg-[#f5f3ed] text-[#183a32] antialiased">
+  <!-- Header -->
+  <header class="absolute inset-x-0 top-0 z-20">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8" aria-label="Điều hướng chính">
+      <a href="#" class="flex items-center gap-2 text-lg font-extrabold tracking-tight text-white">
+        <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-[#e9793b]">
+          <i class="fa-solid fa-mountain-sun" aria-hidden="true"></i>
+        </span>
+        LÊN ĐƯỜNG
+      </a>
+
+      <a
+        href="#tour"
+        class="rounded-full border border-white/40 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur transition hover:bg-white hover:text-[#183a32]"
+      >
+        Khám phá tour
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero-image relative flex min-h-[650px] items-center pb-36 pt-28 text-white sm:min-h-[700px] sm:pb-40">
+      <div class="mx-auto w-full max-w-7xl px-5 sm:px-8">
+        <div class="max-w-3xl animate__animated animate__fadeInUp">
+          <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/90 backdrop-blur">
+            <span class="h-2 w-2 rounded-full bg-[#f2c66d]"></span>
+            Hành trình bắt đầu từ đây
+          </p>
+
+          <h1 class="max-w-3xl text-4xl font-extrabold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
+            Thiên nhiên đang gọi.
+            <span class="mt-2 block text-[#f2c66d]">Bạn đã sẵn sàng lên đường?</span>
+          </h1>
+
+          <p class="mt-6 max-w-xl text-base leading-7 text-white/80 sm:text-lg">
+            Tìm cung đường tiếp theo và để thiên nhiên dẫn lối.
+          </p>
+
+          <a
+            href="#tour"
+            class="mt-8 inline-flex items-center gap-3 rounded-xl bg-[#e9793b] px-6 py-4 font-bold text-white shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:bg-[#d96830]"
+          >
+            Khám phá hành trình
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="absolute bottom-16 left-1/2 hidden -translate-x-1/2 items-center gap-3 text-xs font-medium uppercase tracking-[0.18em] text-white/70 sm:flex">
+        <span class="h-px w-10 bg-white/50"></span>
+        Hành trình đang chờ bạn
+        <span class="h-px w-10 bg-white/50"></span>
+      </div>
+    </section>
+
+    <!-- Quick search -->
+    <section class="relative z-10 mx-auto -mt-24 max-w-7xl px-5 sm:px-8" aria-label="Tìm tour">
+      <form class="grid gap-3 rounded-2xl bg-white p-4 shadow-lg shadow-[#183a32]/10 sm:grid-cols-2 sm:p-5 lg:grid-cols-[1.4fr_1fr_1fr_auto] lg:items-end">
+        <label class="block">
+          <span class="mb-2 block text-xs font-bold uppercase tracking-wider text-[#70766f]">Điểm đến</span>
+          <span class="flex h-12 items-center gap-3 rounded-xl border border-[#e7e8e2] px-4 transition focus-within:border-[#496b50]">
+            <i class="fa-solid fa-location-dot text-[#e9793b]" aria-hidden="true"></i>
+            <input
+              type="text"
+              placeholder="Bạn muốn đi đâu?"
+              class="w-full bg-transparent text-sm text-[#183a32] outline-none placeholder:text-[#9a9f98]"
+            />
+          </span>
+        </label>
+
+        <label class="block">
+          <span class="mb-2 block text-xs font-bold uppercase tracking-wider text-[#70766f]">Độ khó</span>
+          <span class="flex h-12 items-center gap-3 rounded-xl border border-[#e7e8e2] px-4">
+            <i class="fa-regular fa-compass text-[#e9793b]" aria-hidden="true"></i>
+            <select class="w-full bg-transparent text-sm text-[#183a32] outline-none">
+              <option value="">Mọi cấp độ</option>
+              <option>Dễ</option>
+              <option>Trung bình</option>
+              <option>Khó</option>
+            </select>
+          </span>
+        </label>
+
+        <label class="block">
+          <span class="mb-2 block text-xs font-bold uppercase tracking-wider text-[#70766f]">Thời gian</span>
+          <span class="flex h-12 items-center gap-3 rounded-xl border border-[#e7e8e2] px-4">
+            <i class="fa-regular fa-calendar text-[#e9793b]" aria-hidden="true"></i>
+            <select class="w-full bg-transparent text-sm text-[#183a32] outline-none">
+              <option value="">Mọi thời lượng</option>
+              <option>Trong ngày</option>
+              <option>Cuối tuần</option>
+              <option>Nhiều ngày</option>
+            </select>
+          </span>
+        </label>
+
+        <button
+          type="submit"
+          class="flex h-12 items-center justify-center gap-2 rounded-xl bg-[#183a32] px-7 font-bold text-white transition hover:bg-[#294d42]"
+        >
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          Tìm tour
+        </button>
+      </form>
+    </section>
+
+    <!-- Featured tour -->
+    <section id="tour" class="mx-auto max-w-7xl px-5 pb-24 pt-20 sm:px-8 sm:pt-24">
+      <div class="mb-8 flex flex-wrap items-end justify-between gap-4">
+        <div class="animate__animated animate__fadeInUp">
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-[#e9793b]">Được tuyển chọn cho bạn</p>
+          <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-[#183a32] sm:text-4xl">
+            Chuyến đi nổi bật
+          </h2>
+        </div>
+
+        <a href="#tour" class="group inline-flex items-center gap-2 font-semibold text-[#496b50] transition hover:text-[#e9793b]">
+          Xem tất cả
+          <i class="fa-solid fa-arrow-right transition group-hover:translate-x-1" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <article class="group grid overflow-hidden rounded-3xl bg-white shadow-md shadow-[#183a32]/5 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#183a32]/15 md:grid-cols-[1.05fr_1fr]">
+        <!-- Tour photo -->
+        <div class="tour-image relative min-h-[280px] sm:min-h-[380px]">
+          <span class="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full bg-white/95 px-4 py-2 text-xs font-bold text-[#183a32] shadow">
+            <i class="fa-solid fa-leaf text-[#496b50]" aria-hidden="true"></i>
+            Trekking Tây Bắc
+          </span>
+          <span class="absolute bottom-5 left-5 rounded-full bg-[#183a32]/85 px-4 py-2 text-sm font-semibold text-white backdrop-blur">
+            86 người đã đánh giá
+          </span>
+        </div>
+
+        <!-- Tour details -->
+        <div class="flex flex-col justify-center p-6 sm:p-9">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-[#fff4df] px-3 py-1.5 text-sm font-bold text-[#9b6b16]">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              4.9
+            </span>
+            <span class="text-sm text-[#70766f]">86 đánh giá</span>
+          </div>
+
+          <h3 class="mt-4 text-2xl font-extrabold leading-tight tracking-tight text-[#183a32] sm:text-3xl">
+            Chinh phục cung đường trên mây
+          </h3>
+
+          <div class="mt-5 flex flex-wrap gap-x-5 gap-y-3 text-sm text-[#626b64]">
+            <span class="inline-flex items-center gap-2">
+              <i class="fa-regular fa-calendar text-[#496b50]" aria-hidden="true"></i>
+              2 ngày
+            </span>
+            <span class="inline-flex items-center gap-2">
+              <i class="fa-regular fa-map text-[#496b50]" aria-hidden="true"></i>
+              12 km
+            </span>
+          </div>
+
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="inline-flex items-center gap-2 rounded-full bg-[#e9f1e8] px-3.5 py-2 text-sm font-bold text-[#345b3e]">
+              <i class="fa-regular fa-clock" aria-hidden="true"></i>
+              Độ khó: Trung bình
+            </span>
+            <span class="inline-flex items-center gap-2 rounded-full bg-[#fff0e7] px-3.5 py-2 text-sm font-bold text-[#b34e1c]">
+              <i class="fa-solid fa-fire" aria-hidden="true"></i>
+              Còn 4 chỗ
+            </span>
+          </div>
+
+          <div class="mt-7 flex flex-wrap items-end justify-between gap-5 border-t border-[#eeeae2] pt-6">
+            <div>
+              <p class="text-sm text-[#70766f]">Giá từ</p>
+              <p class="mt-1 text-2xl font-extrabold text-[#183a32]">
+                2.490.000đ
+                <span class="text-sm font-medium text-[#70766f]">/ người</span>
+              </p>
+            </div>
+
+            <a
+              href="#booking"
+              class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#e9793b] px-6 py-3 font-bold text-white shadow-md shadow-[#e9793b]/20 transition hover:-translate-y-0.5 hover:bg-[#d96830]"
+            >
+              Đặt tour ngay
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <p class="mt-4 text-sm font-medium text-[#b34e1c]">
+            <i class="fa-regular fa-calendar-check mr-1" aria-hidden="true"></i>
+            Còn 4 chỗ cho ngày 18/11
+          </p>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
